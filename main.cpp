@@ -55,7 +55,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		err = fopen_s(&fp, fname, "r");
 
 		if (err != 0){
-			printf(" ", fname);
+			printf("", fname);
 			return err;
 		}else{
 			printf("", fname);
