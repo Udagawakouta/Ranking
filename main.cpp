@@ -1,4 +1,5 @@
 #include <Novice.h>
+#include <stdio.h>
 
 const char kWindowTitle[] = "ランキング";
 
@@ -45,7 +46,22 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		///
 
-	
+		FILE* fp;
+
+		char fname[] = " ";
+
+		errno_t err;
+
+		err = fopen_s(&fp, fname, "r");
+
+		if (err != 0){
+			printf(" ", fname);
+			return err;
+		}else{
+			printf("", fname);
+		}
+
+		fclose(fp);
 
 		///
 		/// ↑更新処理ここまで
@@ -55,10 +71,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
-		for (int i = 0; i < scoreNums[4]; i++)
-		{
-			scoreNums[i];
-		}
+
 
 		///
 		/// ↑描画処理ここまで
